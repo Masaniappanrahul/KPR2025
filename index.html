@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: orange;
+      background-color: #e84c4c;
       padding: 40px;
     }
 
@@ -15,12 +15,12 @@
     }
 
     .form-container {
-      background-color :rgb(238, 197, 143);
+      background-color: #fff;
       padding: 20px 30px;
       border-radius: 10px;
       width: 400px;
       margin: auto;
-      box-shadow: 0 0 10px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     label {
@@ -32,29 +32,29 @@
       width: 100%;
       padding: 10px;
       margin-top: 5px;
-      border: 1px solid rgb(85, 255, 0);
+      border: 1px solid #ccc;
       border-radius: 5px;
     }
 
     input[type="submit"] {
       margin-top: 20px;
       padding: 10px 20px;
-      background-color: green;
-      color: rgb(255, 255, 255);
+      background-color: #4CAF50;
+      color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
     }
 
     input[type="submit"]:hover {
-      background-color: whitesmoke;
+      background-color: #45a049;
     }
 
     .output {
       margin-top: 30px;
-      background-color: #fef2e7;
+      background-color: #e7f3fe;
       padding: 20px;
-      border-left: 5px solid #0d1917;
+      border-left: 5px solid #2196F3;
     }
   </style>
 </head>
@@ -67,20 +67,14 @@
       <label for="name">Name:</label>
       <input type="text" id="name" required>
 
-      <label for="department">DEPARTMENT:</label>
-      <input type="text" id="department" required>
+      <label for="class">Class:</label>
+      <input type="text" id="class" required>
 
       <label for="rollnumber">Roll Number:</label>
       <input type="text" id="rollnumber" required>
 
-      <label for="dob">DOB:</label>
-      <input type="text" id="dob" required>
-
-      <label for="gender">GENDER:</label>
-      <input type="text" id="gender" required>
-
-      <label for="batch">BATCH:</label>
-      <input type="text" id="batch" required>
+      <label for="department">Department:</label>
+      <input type="text" id="department" required>
 
       <input type="submit" value="Submit">
     </form>
@@ -94,21 +88,18 @@
 
       // Get form values
       const name = document.getElementById("name").value;
-      const studentClass = document.getElementById("departtment").value;
+      const studentClass = document.getElementById("class").value;
       const roll = document.getElementById("rollnumber").value;
-      const dob = document.getElementById("dob").value;
-      const gender=document.getElementById("gender").value;
-      const batch=document.getElementById("batch").value;
+      const dept = document.getElementById("department").value;
 
       // Display the data
       document.getElementById("output").innerHTML = `
         <h3>Submitted Information:</h3>
         <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Department:</strong> ${dept}</p>
+        <p><strong>Class:</strong> ${studentClass}</p>
         <p><strong>Roll Number:</strong> ${roll}</p>
-        <p><strong>Dob:</strong> ${dob}</p>
-         <p><strong>Gender:</strong> ${gender}</p>
-          <p><strong>batch:</strong> ${batch}</p>;`
+        <p><strong>Department:</strong> ${dept}</p>
+      `;
     });
   </script>
 
